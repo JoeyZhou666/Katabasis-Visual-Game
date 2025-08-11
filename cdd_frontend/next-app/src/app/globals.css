@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #e75a7c;
+  --secondary: #f2b5d4;
+  --dark: #2d2d34;
+  --light: #fff9f9;
+  --accent: #ffbe0b;
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Fix for cytoscape canvas movement */
+.cy-container {
+  position: relative;
+}
+
+.cy-controls {
+  /* Make buttons not affect the cytoscape canvas */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none; /* Important - this makes the container not catch events */
+}
+
+.cy-controls > * {
+  pointer-events: auto; /* But the buttons themselves need to catch events */
+}
+
+.navbar {
+  @apply flex items-center bg-dark px-8 py-4;
+}
+
+.nav-logo {
+  @apply font-bold mr-auto h-10;
+}
+
+.nav-links {
+  @apply flex list-none gap-4;
+}
+
+.nav-links li a {
+  @apply text-white no-underline hover:underline;
+}
+
+.container {
+  @apply flex relative m-8 gap-8 h-[80vh];
+}
+
+.left-side {
+  @apply flex-1 bg-light p-8 rounded-lg min-w-[300px] relative;
+}
+
+.right-side {
+  @apply flex-[2] bg-light rounded-lg p-8 min-w-[400px] relative;
+}
+
+.text-bubble {
+  @apply bg-gray-200 p-4 mb-4 rounded-lg w-fit font-indie;
+}
+
+#cy {
+  @apply w-full h-[70vh] border border-gray-300 rounded-lg;
+}
+
+.character {
+  @apply m-0 absolute bottom-0;
+}
+
+#character {
+  @apply max-h-[50vh];
+}
+
+/* Tooltip styles */
+.tooltip {
+  @apply relative inline-block;
+}
+
+.tooltip-text {
+  @apply invisible absolute z-10 bg-dark text-white text-xs rounded py-1 px-2 bottom-full left-1/2 transform -translate-x-1/2 mb-1 whitespace-nowrap opacity-0 transition-opacity duration-300;
+}
+
+.tooltip:hover .tooltip-text {
+  @apply visible opacity-100;
+}
+
+/* Add a little arrow at the bottom of tooltip */
+.tooltip-text::after {
+  content: '';
+  @apply absolute top-full left-1/2 -ml-1 border-4 border-solid border-transparent border-t-dark;
+}
+
+/* Friendly button styles */
+.btn-primary {
+  @apply bg-primary text-white px-4 py-2 rounded-lg shadow hover:bg-opacity-90 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-light text-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-200 transition-colors;
+}
+
+.btn-warning {
+  @apply bg-accent text-dark px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition-colors;
+}
+
+.btn-danger {
+  @apply bg-red-400 text-white px-4 py-2 rounded-lg shadow hover:bg-red-500 transition-colors;
+}
+
+/* Cytoscape node styling */
+.cy-node {
+  @apply bg-primary text-white rounded-lg p-6;
+} 

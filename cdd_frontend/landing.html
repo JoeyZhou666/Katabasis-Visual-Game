@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page with Graph</title>
+  <!-- Cytoscape (CDN link) -->
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+  <!-- Your custom stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+
+
+  </head>
+<body>
+
+
+  <!-- Navigation Section -->
+  <nav class="navbar">
+    <img class="nav-logo" src="images/logo.png">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Main Container: Flexbox divides left & right sections -->
+  <div class="container">
+
+
+    <!-- Left Section: Explanation, images, text bubble -->
+    <section class="left-side">
+      <h2>Your Decision Matters.</h2>
+      <p>Freely explore how you can make a difference.</p>
+
+
+      <!-- Placeholder for text bubble -->
+      <div class="text-bubble">
+        <p>Hi, this is something I wanna show you.</p>
+        <p>Click on the elements to explore!</p>
+      </div>
+     
+      <!-- Placeholder for character image -->
+      <div class="character">
+        <img id="character" src="images/mousy%20smile.PNG" />
+      </div>
+
+
+
+
+    </section>
+
+
+    <!-- Right Section: Cytoscape Graph -->
+    <section class="right-side">
+      <!-- The graph will be injected here by Cytoscape -->
+      <div id="cy"></div>
+    </section>
+
+
+  </div>
+
+
+  <!-- JavaScript: fetch the graph data & initialize Cytoscape -->
+  <script src="landing.js"></script>
+
+
+
+</body>
+</html>

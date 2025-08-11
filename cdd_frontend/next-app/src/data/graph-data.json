@@ -1,0 +1,55 @@
+{
+  "nodes": [
+    {
+      "id": "disruptive_scenario",
+      "label": "Bandit distracts you in class\n______________\n\nLever",
+      "position": { "x": 350, "y": 100 }
+    },
+    {
+      "id": "brief_response",
+      "label": "Ignore him\n______________\n\nIntermediate",
+      "position": { "x": 600, "y": 100 }
+    },
+    {
+      "id": "focus_on_lesson",
+      "label": "Teacher gives warning\n______________\n\nOutcome",
+      "position": { "x": 850, "y": 50 }
+    },
+    {
+      "id": "quick_apology",
+      "label": "Respond to and play in class\n______________\n\nIntermediate",
+      "position": { "x": 850, "y": 200 }
+    },
+    {
+      "id": "Slept less than 6 hours",
+      "label": "Slept less than 6 hours\n______________\n\nExternal",
+      "position": { "x": 500, "y": 250 }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge15",
+      "source": "quick_apology",
+      "target": "focus_on_lesson",
+      "label": "apology done"
+    },
+    {
+      "id": "edge17",
+      "source": "Slept less than 6 hours",
+      "target": "focus_on_lesson",
+      "label": "Look down and focus on the lesson"
+    },
+    {
+      "id": "edge18",
+      "source": "disruptive_scenario",
+      "target": "brief_response",
+      "label": "Look down and focus on the lesson"
+    },
+    {
+      "id": "edge19",
+      "source": "brief_response",
+      "target": "quick_apology",
+      "label": "Keep talking to Bandit when she turns around"
+    }
+  ]
+} 

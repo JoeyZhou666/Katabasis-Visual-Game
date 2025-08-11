@@ -1,0 +1,124 @@
+{
+  "$schema": "./schema/Causal-Decision-Model.json",
+  "meta": {
+    "uuid": "c8b404f4-45bb-4d4a-9cbb-2a295efce1d0",
+    "name": "Disruptive Behavior Scenario",
+    "summary": "This scene focuses on classroom disruption and decision-making, helping students with emotional and behavioral disorders understand the consequences of their choices and develop better decision intelligence.",
+    "documentation": {
+      "content": "Ren’Py script scenario demonstrating how different classroom behaviors lead to various outcomes. Adapted into an OpenDI schema for visualization.",
+      "MIMEType": "text/plain"
+    },
+    "version": "0.1",
+    "draft": true,
+    "updatedDate": "2025-03-04T00:00:00"
+  },
+  "diagrams": [
+    {
+      "meta": {
+        "uuid": "54f2e950-ade6-402f-8e0f-6ebf38ad9477",
+        "name": "Disruptive Behavior CDD"
+      },
+      "elements": [
+        {
+          "meta": {
+            "uuid": "disruptive_scenario",
+            "name": "Bandit distracts you in class"
+          },
+          "causalType": "Lever",
+          "diaType": "box",
+          "content": {
+            "position": { "x": 350, "y": 100 },
+            "boundingBoxSize": { "width": 200, "height": 80 }
+          }
+        },
+        {
+          "meta": {
+            "uuid": "brief_response",
+            "name": "Ignore him"
+          },
+          "causalType": "Intermediate",
+          "diaType": "box",
+          "content": {
+            "position": { "x": 600, "y": 100 },
+            "boundingBoxSize": { "width": 200, "height": 80 }
+          }
+        },
+        {
+          "meta": {
+            "uuid": "focus_on_lesson",
+            "name": "Teacher gives warning"
+          },
+          "causalType": "Outcome",
+          "diaType": "box",
+          "content": {
+            "position": { "x": 850, "y": 50 },
+            "boundingBoxSize": { "width": 200, "height": 80 }
+          }
+        },
+        {
+          "meta": {
+            "uuid": "quick_apology",
+            "name": "Respond to and play in class"
+          },
+          "causalType": "Intermediate",
+          "diaType": "box",
+          "content": {
+            "position": { "x": 850, "y": 200 },
+            "boundingBoxSize": { "width": 200, "height": 80 }
+          }
+        },
+        {
+          "meta": {
+            "uuid": "Slept less than 6 hours",
+            "name": "Slept less than 6 hours"
+          },
+          "causalType": "External",
+          "diaType": "box",
+          "content": {
+            "position": { "x": 500, "y": 250 },
+            "boundingBoxSize": { "width": 200, "height": 80 }
+          }
+        }
+      ],
+      "dependencies": [
+      
+
+        {
+          "meta": {
+            "uuid": "edge15",
+            "name": "apology done"
+          },
+          "source": "quick_apology",
+          "target": "focus_on_lesson"
+        },
+
+        {
+          "meta": {
+            "uuid": "edge17",
+            "name": "Look down and focus on the lesson"
+          },
+          "source": "Slept less than 6 hours",
+          "target": "focus_on_lesson"
+        },
+        {
+          "meta": {
+            "uuid": "edge18",
+            "name": "Look down and focus on the lesson"
+          },
+          "source": "disruptive_scenario",
+          "target": "brief_response"
+        },
+
+        {
+          "meta": {
+            "uuid": "edge19",
+            "name": "Keep talking to Bandit when she turns around"
+          },
+          "source": "brief_response",
+          "target": "quick_apology"
+        }
+
+      ]
+    }
+  ]
+}

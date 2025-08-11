@@ -1,0 +1,15 @@
+{
+  "name": "cdd_frontend",
+  "version": "1.0.0",
+  "main": "landing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cd next-app && npm run dev",
+    "build": "cd next-app && npm run build",
+    "start": "cd next-app && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Interactive Causal Decision Diagram"
+}

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 120: expected statement.
+    for chunk in json_chunks:
+              ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Fri Feb 28 03:41:04 2025

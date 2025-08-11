@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\page.tsx -> @/components/SimpleCytoscapeGraph\":{\"id\":\"app\\\\page.tsx -> @/components/SimpleCytoscapeGraph\",\"files\":[\"static/chunks/_app-pages-browser_src_components_SimpleCytoscapeGraph_tsx.js\"]}}"

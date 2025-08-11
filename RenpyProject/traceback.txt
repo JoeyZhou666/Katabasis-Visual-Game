@@ -1,0 +1,37 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/schemaExportUtil/testExport.rpy", line 3, in script
+    init python:
+  File "game/schemaExportUtil/testExport.rpy", line 3, in script
+    init python:
+  File "game/schemaExportUtil/testExport.rpy", line 88, in <module>
+    config.choice_callback = auto_choice_callback
+Exception: config.choice_callback is not a known configuration variable.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "D:\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.3.4-sdk\renpy\main.py", line 541, in main
+    renpy.game.context().run(node)
+  File "game/schemaExportUtil/testExport.rpy", line 3, in script
+    init python:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/schemaExportUtil/testExport.rpy", line 3, in script
+    init python:
+  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/schemaExportUtil/testExport.rpy", line 88, in <module>
+    config.choice_callback = auto_choice_callback
+  File "D:\renpy-8.3.4-sdk\renpy\defaultstore.py", line 101, in __setattr__
+    raise Exception('config.%s is not a known configuration variable.' % (name))
+Exception: config.choice_callback is not a known configuration variable.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.4.24120703
+Katabasis 1.0
+Fri Feb 28 02:16:04 2025

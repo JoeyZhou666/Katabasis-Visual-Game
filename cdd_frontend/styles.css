@@ -1,0 +1,106 @@
+/* Basic reset & styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cfa9b2;
+  font-family: 'Papyrus';
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #1e140b;
+  /* Increase top/bottom and left/right padding for more space */
+  padding: 1rem 2rem;
+}
+.nav-logo {
+  font-weight: bold;
+  margin-right: auto;
+  height: 40px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Container holds the two main sections (left & right) */
+.container {
+  display: flex;
+  position: relative;
+  /* Increase margin around the container to create more "breathing room" */
+  margin: 2rem;
+  /* Increase gap between left and right sections */
+  gap: 2rem;
+  height: 80vh;
+}
+
+/* Left Side: Explanation, images, text bubble */
+.left-side {
+  flex: 1;
+  background-color: #f7f5f2;
+  /* Increase padding inside the box */
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 300px;
+}
+.left-side h2 {
+  margin-bottom: 0.75rem; /* Slightly more space below headings */
+}
+.left-side p {
+  margin-bottom: 1.25rem; /* More spacing between paragraphs */
+}
+.character {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+
+}
+.text-bubble {
+  background: #eee;
+  padding: 1rem; /* Increase padding inside text bubble */
+  margin-bottom: 1rem; /* More space below text bubble */
+  border-radius: 8px;
+  width: fit-content;
+  font-family: 'Indie Flower';
+}
+
+
+/* Right Side: Cytoscape graph container */
+.right-side {
+  flex: 2;
+  background-color: #f7f5f2;
+  border-radius: 8px;
+  /* Increase padding for consistent spacing with left side */
+  padding: 2rem;
+  min-width: 400px;
+  position: relative;
+}
+
+/* Cytoscape container */
+#cy {
+  width: 100%;
+  height: 70vh; /* Adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Character image: set max-width to keep it responsive */
+#character {
+  max-height: 50vh;
+}
+ 
+
+
