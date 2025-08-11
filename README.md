@@ -12,7 +12,6 @@ This is an interactive visual novel built using the [Ren'Py](https://www.renpy.o
 - Clone this repository to your local machine
 - Move the "RenpyProject" folder into your Ren'Py installation directory so it is recognized as a project by Ren'Py
 - Open Ren'Py and select "Web".
-- ![image](https://github.ncsu.edu/engr-csc-sdc/2025Spring-Team45-Katabasis-2/assets/26192/361a4c39-e72b-472c-bf03-ecdb964297b3)
 - Select the build option of your preference.
 
 ### Running the Game
